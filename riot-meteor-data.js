@@ -4,6 +4,7 @@ const RiotMeteorData = {
     this._meteorDataManager = new MeteorDataManager(this);
 
     const newData = this._meteorDataManager.calculateData();
+    console.log('init', newData);
     this._meteorDataManager.updateData(newData);
 
     this.on('update', function() {
@@ -96,4 +97,4 @@ class MeteorDataManager {
   }
 }
 
-export const RiotMeteorData;
+export default RiotMeteorData;
